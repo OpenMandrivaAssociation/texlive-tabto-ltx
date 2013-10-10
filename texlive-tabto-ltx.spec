@@ -1,12 +1,12 @@
-# revision 18159
+# revision 30710
 # category Package
 # catalog-ctan /macros/latex/contrib/tabto
-# catalog-date 2010-05-23 19:54:42 +0200
+# catalog-date 2013-05-25 17:03:59 +0200
 # catalog-license lppl
-# catalog-version 1.0
+# catalog-version 1.3
 Name:		texlive-tabto-ltx
-Version:	1.0
-Release:	2
+Version:	1.3
+Release:	1
 Summary:	"Tab" to a measured position in the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabto
@@ -41,7 +41,6 @@ the next defined 'tab stop'.
 %{_texmfdistdir}/tex/latex/tabto-ltx/tabto.sty
 %doc %{_texmfdistdir}/doc/latex/tabto-ltx/tabto-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/tabto-ltx/tabto-doc.tex
-%doc %{_texmfdistdir}/doc/latex/tabto-ltx/tabto.txt
 
 #-----------------------------------------------------------------------
 %prep
@@ -52,16 +51,3 @@ the next defined 'tab stop'.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 756436
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 719642
-- texlive-tabto-ltx
-- texlive-tabto-ltx
-- texlive-tabto-ltx
-
