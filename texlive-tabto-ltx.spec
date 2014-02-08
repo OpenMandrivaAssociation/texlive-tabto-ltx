@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-tabto-ltx
 Version:	1.0
-Release:	2
+Release:	3
 Summary:	"Tab" to a measured position in the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabto
