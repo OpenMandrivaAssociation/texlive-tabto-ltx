@@ -1,18 +1,12 @@
-# revision 30710
-# category Package
-# catalog-ctan /macros/latex/contrib/tabto
-# catalog-date 2013-05-25 17:03:59 +0200
-# catalog-license lppl
-# catalog-version 1.3
 Name:		texlive-tabto-ltx
-Version:	1.4
+Version:	54080
 Release:	1
 Summary:	"Tab" to a measured position in the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabto
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabto-ltx.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabto-ltx.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabto-ltx.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tabto-ltx.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,22 +23,21 @@ after which the command \tab advances typesetting position to
 the next defined 'tab stop'.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/tabto-ltx/tabto.sty
-%doc %{_texmfdistdir}/doc/latex/tabto-ltx/tabto-doc.pdf
-%doc %{_texmfdistdir}/doc/latex/tabto-ltx/tabto-doc.tex
+%{_texmfdistdir}/tex/latex/tabto-ltx
+%doc %{_texmfdistdir}/doc/latex/tabto-ltx
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
