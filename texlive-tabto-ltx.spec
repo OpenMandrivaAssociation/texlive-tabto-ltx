@@ -1,6 +1,6 @@
 Name:		texlive-tabto-ltx
 Version:	54080
-Release:	1
+Release:	2
 Summary:	"Tab" to a measured position in the line
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/tabto
